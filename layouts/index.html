@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berk Yılmaz | Portfolyo</title>
+    <style>
+        /* --- STİL AYARLARI (Değişmedi, aynı kaldı) --- */
+        :root {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --accent-color: #00bcd4;
+            --card-bg: #1e1e1e;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 0; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 60px 0; border-bottom: 1px solid #333; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; color: var(--accent-color); font-weight: bold; }
+        .bio { margin-top: 20px; color: #aaa; max-width: 600px; margin-left: auto; margin-right: auto; }
+        h2 { border-left: 4px solid var(--accent-color); padding-left: 10px; margin-top: 40px; color: #fff; }
+        .card { background-color: var(--card-bg); padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-title { font-size: 1.2rem; font-weight: bold; color: #fff; margin-bottom: 5px; display: block; }
+        .card-date { font-size: 0.85rem; color: #888; margin-bottom: 10px; display: block; }
+        .tags span { background-color: #333; color: var(--accent-color); padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
+        .skill-item { background-color: var(--card-bg); padding: 10px; text-align: center; border-radius: 5px; border: 1px solid #333; }
+        footer { text-align: center; padding: 40px 0; color: #666; font-size: 0.9rem; margin-top: 50px; border-top: 1px solid #333; }
+        a { color: var(--accent-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Berk Yılmaz</h1>
+            <div class="subtitle">Lise Öğrencisi & Teknoloji Meraklısı</div>
+            <p class="bio">
+                Merhaba! Ben Berk. Donanım, ağ teknolojileri ve web geliştirmeye ilgi duyuyorum. 
+                Karmaşık problemleri çözmeyi ve eski donanımlara (sunucu projeleri gibi) yeni işlevler kazandırmayı seviyorum.
+                Şu anda Hugo ve açık kaynak teknolojileri üzerine kendimi geliştiriyorum.
+            </p>
+        </header>
+
+        <section>
+            <h2>Deneyim & Staj</h2>
+            
+            <div class="card">
+                <span class="card-title">Mali Hizmetler Stajyeri</span>
+                <span class="card-date">Belediye Mali Hizmetler Müdürlüğü | Eylül 2025 - Devam Ediyor</span>
+                <p>
+                    Belediye bünyesindeki finansal süreçlerin yönetildiği YBS (Yönetim Bilgi Sistemi) altyapısını ve işleyişini gözlemledim.
+                    Kurumsal kaynak planlama yazılımlarının (ERP) kullanıcı tarafındaki kullanımı ve veri girişi süreçleri hakkında bilgi edindim.
+                    Kurumsal ofis ortamında iş disiplini ve hiyerarşik çalışma düzeni tecrübesi kazandım.
+                </p>
+                <div class="tags">
+                    <span>YBS (Yönetim Bilgi Sistemi)</span>
+                    <span>Kurumsal Yazılım İşleyişi</span>
+                    <span>Ofis Yönetimi</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projeler & Çalışmalar</h2>
+
+            <div class="card">
+                <span class="card-title">Ev Sunucusu (Home Lab) Projesi</span>
+                <p>
+                    Kullanılmayan bir anakartı (Vestel V Tab serisi) yeniden değerlendirerek kişisel bir ev sunucusuna dönüştürdüm. 
+                    Üzerinde ağ yapılandırmaları ve sunucu optimizasyonları yaparak, düşük kaynaklı donanımlarda verimlilik sağladım.
+                </p>
+                <div class="tags">
+                    <span>Sunucu Yönetimi</span>
+                    <span>Donanım Modifikasyonu</span>
+                    <span>Ağ Güvenliği</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="card-title">Yazıcı Otomasyon Scripti</span>
+                <p>
+                    Yazıcı bakım süreçlerini hızlandırmak için Windows batch (.bat) scripti yazdım. 
+                    Bu script, manuel işlemler yerine komut satırı üzerinden kağıt besleme ve çıktı testlerini otomatikleştirerek zaman kazandırdı.
+                </p>
+                <div class="tags">
+                    <span>Batch Scripting</span>
+                    <span>Otomasyon</span>
+                    <span>Windows CMD</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="card-title">Kişisel Portfolyo Sitesi</span>
+                <p>
+                    Bu web sitesi, Hugo (Go tabanlı statik site oluşturucu) kullanılarak tasarlandı. 
+                    GitHub Actions ile CI/CD (Sürekli Entegrasyon) hattı kurularak, kodlar her güncellendiğinde sitenin otomatik olarak yayına alınması sağlandı.
+                </p>
+                <div class="tags">
+                    <span>Hugo</span>
+                    <span>Git & GitHub</span>
+                    <span>HTML/CSS</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Teknik Yetenekler</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Bilgisayar Donanımı</div>
+                <div class="skill-item">Ağ & Modem Kurulumu</div>
+                <div class="skill-item">Yazıcı Teknolojileri</div>
+                <div class="skill-item">Git & GitHub</div>
+                <div class="skill-item">HTML & CSS</div>
+                <div class="skill-item">YBS / ERP Aşinalığı</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Benimle iletişime geçmek için:</p>
+            <p>
+                <a href="mailto:seninmailin@ornek.com">Email Gönder</a> | 
+                <a href="https://github.com/berkyilmazcom" target="_blank">GitHub Profilim</a>
+            </p>
+            <p>&copy; 2026 Berk Yılmaz. Hugo ile yapılmıştır.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
